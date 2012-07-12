@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>org.exoplatform.search</groupId>
+    <artifactId>search-elasticsearch</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+
+    <properties>
+        <org.exoplatform.kernel.version>2.3.7-GA</org.exoplatform.kernel.version>
+        <org.exoplatform.forum.version>4.0.0.Alpha1-SNAPSHOT</org.exoplatform.forum.version>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.exoplatform.kernel</groupId>
+            <artifactId>exo.kernel.container</artifactId>
+            <version>${org.exoplatform.kernel.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.exoplatform.forum</groupId>
+            <artifactId>forum-forum-service</artifactId>
+            <version>${org.exoplatform.forum.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.elasticsearch</groupId>
+            <artifactId>elasticsearch</artifactId>
+            <version>0.19.8</version>
+        </dependency>
+    </dependencies>
+</project>
