@@ -2,12 +2,37 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                xsi:schemaLocation="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd http://www.exoplatform.org/xml/ns/kernel_1_2.xsd"
                xmlns="http://www.exoplatform.org/xml/ns/kernel_1_2.xsd">
+
+    <!-- ECMS indexer -->
+    <external-component-plugins>
+        <target-component>org.exoplatform.services.listener.ListenerService</target-component>
+        <component-plugin>
+            <name>WCMPublicationService.event.updateState</name>
+            <set-method>addListener</set-method>
+            <type>org.exoplatform.search.content.SearchContentIndexer</type>
+        </component-plugin>
+    </external-component-plugins>
+
+    <!-- Forum indexer -->
     <external-component-plugins>
         <target-component>org.exoplatform.forum.service.ForumService</target-component>
         <component-plugin>
-            <name>ForumEventListener</name>
+            <name>SearchForumEventListener</name>
             <set-method>addListenerPlugin</set-method>
             <type>org.exoplatform.search.forum.SearchForumIndexer</type>
         </component-plugin>
     </external-component-plugins>
+
+    <!-- Social indexer -->
+
+    <!-- Wiki indexer -->
+    <external-component-plugins>
+        <target-component>org.exoplatform.wiki.service.WikiService</target-component>
+        <component-plugin>
+            <name>SearchPageWikiListener</name>
+            <set-method>addComponentPlugin</set-method>
+            <type>org.exoplatform.search.wiki.SearchWikiIndexer</type>
+        </component-plugin>
+    </external-component-plugins>
+
 </configuration>

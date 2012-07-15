@@ -13,6 +13,8 @@ import static org.elasticsearch.common.xcontent.XContentFactory.*;
 
 /**
  * Implement a Forum Listener to index Post content.
+ *
+ * TODO : missing delete Post
  */
 public class SearchForumIndexer extends ForumEventListener {
     private static final Log log = ExoLogger.getLogger(SearchForumIndexer.class);
